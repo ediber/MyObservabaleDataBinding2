@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.nuvo.myobservabaledatabinding2.MyModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.nuvo.
+        myobservabaledatabinding.MainActivity">
+
+
+        <EditText
+            android:id="@+id/editText00"
+            android:layout_width="101dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{model.lst[0]}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText01"
+            android:layout_width="116dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginRight="279dp"
+            android:layout_marginTop="1dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{model.lst[1]}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText00" />
+
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="105dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{model.lst[0]}"
+            app:layout_constraintLeft_toLeftOf="@+id/editText00"
+            app:layout_constraintTop_toBottomOf="@+id/editText00" />
+
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="116dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@{model.lst[1]}"
+            app:layout_constraintRight_toRightOf="@+id/editText01"
+            app:layout_constraintTop_toTopOf="@+id/editText10" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="94dp"
+            android:layout_marginTop="42dp"
+            android:text="update"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--android:onClick="@{() -> model.update(5, 6)}"-->
+        <!--android:onClick="@{model::update}"-->
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
